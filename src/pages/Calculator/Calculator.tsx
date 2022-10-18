@@ -49,7 +49,7 @@ export const CalculatorPage: React.FC<Props> = (props: Props) => {
     });
   };
 
-  const result = Object.keys(values).reduce((acc: number, itemName: string) => {
+  let result = Object.keys(values).reduce((acc: number, itemName: string) => {
     return acc + values[itemName].kcal;
   }, 0);
 
@@ -78,7 +78,7 @@ export const CalculatorPage: React.FC<Props> = (props: Props) => {
           <div className={classes.buttonContainer}>
             <Button variant="contained" onClick={
               () => {
-                let result = 0;
+                result = 0;
               }
             }>
               {result} Kcal
